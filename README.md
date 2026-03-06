@@ -4,6 +4,35 @@ AI-powered risk intelligence platform for customs container screening.
 Team: `Syntax_Error`  
 Members: `Anmol Gupta`, `Hari Om Mishra`, `Sagar Yadav`
 
+## Run Now (Copy-Paste)
+
+### Option A: Final Judge Flow (Docker + Frontend)
+```bash
+cd /home/anmol/Desktop/s_cont
+mkdir -p outputs
+cp summary_report.json outputs/summary_report.json
+docker compose up --build -d
+
+cd /home/anmol/Desktop/s_cont/dashboard
+npm install
+npm start
+```
+
+Open: `http://localhost:3000`  
+API check: `http://localhost:5000/health`
+
+### Option B: Quick Local Flow (No Docker)
+```bash
+cd /home/anmol/Desktop/s_cont
+source venv/bin/activate
+python3 api.py
+```
+In another terminal:
+```bash
+cd /home/anmol/Desktop/s_cont/dashboard
+npm start
+```
+
 ## What It Does
 - Trains on historical customs data.
 - Scores incoming real-time containers with a `0-100` risk score.
@@ -106,7 +135,7 @@ Dashboard starts at: `http://localhost:3000`
 | Auditability | JSON/PDF audit report generation via `GET /audit-report` |
 
 ## Judge Quick Demo
-1. Start backend (`python3 api.py`).
+1. Start backend (`docker compose up --build -d`).
 2. Start dashboard (`npm start` in `dashboard/`).
 3. Open `http://localhost:3000`.
 4. Use **Check Container** for single prediction and **Workflow** for audit/drift/feedback.
