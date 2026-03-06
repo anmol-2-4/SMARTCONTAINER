@@ -71,11 +71,33 @@ Dashboard starts at: `http://localhost:3000`
 - Audit report export for governance.
 - Explainable risk profile per container.
 
+## Problem Statement Mapping
+| Problem Requirement | Implementation in SMARTCONTAINER |
+|---|---|
+| Train on historical data | Model trained from `Historical Data.csv` / `Historical_Data.csv` |
+| Test on real-time data | Inference on `Real-Time Data.csv` / `Real-Time_Data.csv` |
+| Risk scoring | `0-100` score from ensemble model |
+| Suspicious container identification | `Critical` prediction + anomaly flags |
+| Explainability | Risk profile panel + explanation summary per container |
+| Officer feedback loop | `POST /feedback`, feedback stats, and export |
+| Drift and reliability | `GET /drift` + threshold analysis endpoint |
+| Auditability | JSON/PDF audit report generation via `GET /audit-report` |
+
 ## Judge Quick Demo
 1. Start backend (`python3 api.py`).
 2. Start dashboard (`npm start` in `dashboard/`).
 3. Open `http://localhost:3000`.
 4. Use **Check Container** for single prediction and **Workflow** for audit/drift/feedback.
+
+## Demo Video
+- Walkthrough Video: `https://your-demo-link-here`
+- PPT Deck: `SmartContainer_Detailed_Project_Deck.pptx`
+- Suggested video flow:
+  - Problem context and pain points
+  - Live prediction on a sample container
+  - Risk explanation panel
+  - Feedback + retrain workflow
+  - Drift and audit exports
 
 ## Repository
 GitHub: `https://github.com/anmol-2-4/SMARTCONTAINER`
