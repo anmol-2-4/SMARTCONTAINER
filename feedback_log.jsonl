@@ -1,0 +1,2 @@
+{"timestamp_utc": "2026-03-06T08:40:12.001696+00:00", "Container_ID": "anm_0001", "Predicted_Level_Binary": "Critical", "Officer_Outcome": "Low Risk", "Match": 0, "Action_Taken": "Document review", "Officer_ID": "OFFICER_01", "Comment": ""}
+{"timestamp_utc": "2026-03-06T14:11:52.178177+00:00", "Container_ID": "ANM_!!!!", "Predicted_Level_Binary": "Critical", "Officer_Outcome": "Low Risk", "Match": 0, "Action_Taken": "Document review", "Officer_ID": "OFFICER_01", "Comment": ""}

@@ -1,0 +1,424 @@
+{
+  "batch_size": 8481,
+  "hist_size": 54000,
+  "high_risk": 73,
+  "medium_risk": 1754,
+  "low_risk": 6654,
+  "critical_2level": 73,
+  "anomalies_total": 1046,
+  "anomalies_weight": 25,
+  "anomalies_value_wt": 267,
+  "anomalies_behaviour": 458,
+  "model_auc": {
+    "Clear": 1.0,
+    "Low Risk": 1.0,
+    "Critical": 1.0
+  },
+  "avg_risk_scores": {
+    "High": 53.5,
+    "Medium": 22.4,
+    "Low": 2.9
+  },
+  "dwell_avg": {
+    "High": 75.3,
+    "Low": 40.7,
+    "Medium": 50.4
+  },
+  "weight_diff_avg": {
+    "High": 0.229,
+    "Low": 0.0248,
+    "Medium": 0.1086
+  },
+  "score_buckets": {
+    "0-10": 6602,
+    "10-25": 1471,
+    "25-50": 343,
+    "50-75": 65,
+    "75-100": 0
+  },
+  "origin_risk": [
+    {
+      "Origin_Country": "CN",
+      "count": 4285,
+      "avg_score": 7.19,
+      "high": 48
+    },
+    {
+      "Origin_Country": "DE",
+      "count": 319,
+      "avg_score": 7.53,
+      "high": 3
+    },
+    {
+      "Origin_Country": "JP",
+      "count": 784,
+      "avg_score": 6.49,
+      "high": 3
+    },
+    {
+      "Origin_Country": "US",
+      "count": 729,
+      "avg_score": 7.22,
+      "high": 3
+    },
+    {
+      "Origin_Country": "GB",
+      "count": 85,
+      "avg_score": 11.0,
+      "high": 2
+    },
+    {
+      "Origin_Country": "KR",
+      "count": 378,
+      "avg_score": 6.48,
+      "high": 2
+    },
+    {
+      "Origin_Country": "SG",
+      "count": 24,
+      "avg_score": 9.28,
+      "high": 2
+    },
+    {
+      "Origin_Country": "CA",
+      "count": 65,
+      "avg_score": 10.44,
+      "high": 2
+    },
+    {
+      "Origin_Country": "TH",
+      "count": 89,
+      "avg_score": 9.15,
+      "high": 2
+    },
+    {
+      "Origin_Country": "IT",
+      "count": 260,
+      "avg_score": 7.63,
+      "high": 1
+    },
+    {
+      "Origin_Country": "ID",
+      "count": 51,
+      "avg_score": 8.76,
+      "high": 1
+    },
+    {
+      "Origin_Country": "SE",
+      "count": 23,
+      "avg_score": 7.77,
+      "high": 1
+    },
+    {
+      "Origin_Country": "FR",
+      "count": 108,
+      "avg_score": 8.03,
+      "high": 1
+    },
+    {
+      "Origin_Country": "TW",
+      "count": 143,
+      "avg_score": 8.58,
+      "high": 1
+    },
+    {
+      "Origin_Country": "VN",
+      "count": 322,
+      "avg_score": 7.11,
+      "high": 1
+    }
+  ],
+  "hs_risk": [
+    {
+      "hs_ch": "84",
+      "count": 640,
+      "avg_score": 8.96,
+      "high": 14
+    },
+    {
+      "hs_ch": "85",
+      "count": 987,
+      "avg_score": 7.1,
+      "high": 12
+    },
+    {
+      "hs_ch": "95",
+      "count": 296,
+      "avg_score": 9.11,
+      "high": 12
+    },
+    {
+      "hs_ch": "90",
+      "count": 424,
+      "avg_score": 9.48,
+      "high": 6
+    },
+    {
+      "hs_ch": "62",
+      "count": 509,
+      "avg_score": 6.78,
+      "high": 3
+    },
+    {
+      "hs_ch": "39",
+      "count": 840,
+      "avg_score": 7.82,
+      "high": 2
+    },
+    {
+      "hs_ch": "44",
+      "count": 106,
+      "avg_score": 7.79,
+      "high": 2
+    },
+    {
+      "hs_ch": "33",
+      "count": 140,
+      "avg_score": 6.2,
+      "high": 2
+    },
+    {
+      "hs_ch": "63",
+      "count": 151,
+      "avg_score": 7.13,
+      "high": 2
+    },
+    {
+      "hs_ch": "64",
+      "count": 127,
+      "avg_score": 7.66,
+      "high": 2
+    },
+    {
+      "hs_ch": "65",
+      "count": 46,
+      "avg_score": 9.02,
+      "high": 2
+    },
+    {
+      "hs_ch": "87",
+      "count": 240,
+      "avg_score": 8.32,
+      "high": 2
+    }
+  ],
+  "top_high_risk": [
+    {
+      "Container_ID": 76991507,
+      "Risk_Score": 58.8,
+      "P_Critical": 1.0,
+      "Origin_Country": "CN",
+      "HS_Code": 950300,
+      "Dwell_Time_Hours": 129.2,
+      "Weight_Diff_Pct": 0.343,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 34% vs declared (2000.0\u21922685.3 kg); Importer has 50.0% historical critical rate; Extended dwell time (129h > 100h)"
+    },
+    {
+      "Container_ID": 25026736,
+      "Risk_Score": 57.6,
+      "P_Critical": 1.0,
+      "Origin_Country": "US",
+      "HS_Code": 847759,
+      "Dwell_Time_Hours": 146.2,
+      "Weight_Diff_Pct": 0.397,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 40% vs declared (48.0\u219267.1 kg); Importer has 100.0% historical critical rate; Extended dwell time (146h > 100h)"
+    },
+    {
+      "Container_ID": 91475507,
+      "Risk_Score": 57.5,
+      "P_Critical": 0.996,
+      "Origin_Country": "KR",
+      "HS_Code": 851981,
+      "Dwell_Time_Hours": 135.2,
+      "Weight_Diff_Pct": 0.343,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 34% vs declared (2801.0\u21923760.7 kg); Importer has 100.0% historical critical rate; Extended dwell time (135h > 100h)"
+    },
+    {
+      "Container_ID": 17293618,
+      "Risk_Score": 57.3,
+      "P_Critical": 1.0,
+      "Origin_Country": "CN",
+      "HS_Code": 901910,
+      "Dwell_Time_Hours": 166.8,
+      "Weight_Diff_Pct": 0.444,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 44% vs declared (1059.0\u21921529.2 kg); Importer has 20.0% historical critical rate; Extreme dwell time (167h > 150h)"
+    },
+    {
+      "Container_ID": 97911336,
+      "Risk_Score": 57.2,
+      "P_Critical": 0.991,
+      "Origin_Country": "JP",
+      "HS_Code": 441510,
+      "Dwell_Time_Hours": 152.2,
+      "Weight_Diff_Pct": 0.397,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 40% vs declared (8.9\u219212.4 kg); Importer has 25.0% historical critical rate; Extreme dwell time (152h > 150h)"
+    },
+    {
+      "Container_ID": 52792596,
+      "Risk_Score": 57.1,
+      "P_Critical": 0.973,
+      "Origin_Country": "CA",
+      "HS_Code": 284440,
+      "Dwell_Time_Hours": 45.3,
+      "Weight_Diff_Pct": 0.241,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight discrepancy of 24% detected; Importer has 7.1% historical critical rate; Off-hours declaration at 22:12"
+    },
+    {
+      "Container_ID": 60233168,
+      "Risk_Score": 57.1,
+      "P_Critical": 1.0,
+      "Origin_Country": "CN",
+      "HS_Code": 950300,
+      "Dwell_Time_Hours": 126.3,
+      "Weight_Diff_Pct": 0.314,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 31% vs declared (3860.0\u21925072.2 kg); Importer has 33.3% historical critical rate; Extended dwell time (126h > 100h)"
+    },
+    {
+      "Container_ID": 76696724,
+      "Risk_Score": 57.0,
+      "P_Critical": 0.996,
+      "Origin_Country": "CN",
+      "HS_Code": 330430,
+      "Dwell_Time_Hours": 162.0,
+      "Weight_Diff_Pct": 0.428,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 43% vs declared (44.9\u219264.1 kg); Extreme dwell time (162h > 150h); Off-hours declaration at 00:22"
+    },
+    {
+      "Container_ID": 62172523,
+      "Risk_Score": 57.0,
+      "P_Critical": 0.998,
+      "Origin_Country": "CN",
+      "HS_Code": 950300,
+      "Dwell_Time_Hours": 122.3,
+      "Weight_Diff_Pct": 0.301,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 30% vs declared (6897.6\u21928974.1 kg); Importer has 16.7% historical critical rate; Extended dwell time (122h > 100h)"
+    },
+    {
+      "Container_ID": 39444307,
+      "Risk_Score": 56.7,
+      "P_Critical": 1.0,
+      "Origin_Country": "CN",
+      "HS_Code": 950300,
+      "Dwell_Time_Hours": 129.2,
+      "Weight_Diff_Pct": 0.343,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 34% vs declared (6897.6\u21929261.0 kg); Importer has 11.1% historical critical rate; Extended dwell time (129h > 100h)"
+    },
+    {
+      "Container_ID": 67782030,
+      "Risk_Score": 56.7,
+      "P_Critical": 1.0,
+      "Origin_Country": "CN",
+      "HS_Code": 901890,
+      "Dwell_Time_Hours": 151.1,
+      "Weight_Diff_Pct": 0.413,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 41% vs declared (39.4\u219255.7 kg); Importer has 16.7% historical critical rate; Extreme dwell time (151h > 150h)"
+    },
+    {
+      "Container_ID": 58202458,
+      "Risk_Score": 56.5,
+      "P_Critical": 0.997,
+      "Origin_Country": "CN",
+      "HS_Code": 871160,
+      "Dwell_Time_Hours": 128.4,
+      "Weight_Diff_Pct": 0.34,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 34% vs declared (3550.0\u21924757.1 kg); Importer has 20.0% historical critical rate; Extended dwell time (128h > 100h)"
+    },
+    {
+      "Container_ID": 51759899,
+      "Risk_Score": 56.5,
+      "P_Critical": 1.0,
+      "Origin_Country": "CN",
+      "HS_Code": 950300,
+      "Dwell_Time_Hours": 141.7,
+      "Weight_Diff_Pct": 0.363,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 36% vs declared (3860.0\u21925262.9 kg); Importer has 14.3% historical critical rate; Extended dwell time (142h > 100h)"
+    },
+    {
+      "Container_ID": 35035866,
+      "Risk_Score": 56.5,
+      "P_Critical": 0.997,
+      "Origin_Country": "US",
+      "HS_Code": 841981,
+      "Dwell_Time_Hours": 121.9,
+      "Weight_Diff_Pct": 0.319,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 32% vs declared (753.4\u2192993.9 kg); Importer has 16.7% historical critical rate; Extended dwell time (122h > 100h)"
+    },
+    {
+      "Container_ID": 63763760,
+      "Risk_Score": 56.4,
+      "P_Critical": 1.0,
+      "Origin_Country": "CN",
+      "HS_Code": 854370,
+      "Dwell_Time_Hours": 132.8,
+      "Weight_Diff_Pct": 0.335,
+      "Anomaly_Flag": 1,
+      "Explanation_Summary": "Weight excess of 33% vs declared (120.6\u2192161.0 kg); Importer has 20.0% historical critical rate; Extended dwell time (133h > 100h)"
+    }
+  ],
+  "top_features": [
+    {
+      "name": "weight_diff_pct",
+      "importance": 0.3632
+    },
+    {
+      "name": "weight_ratio",
+      "importance": 0.1973
+    },
+    {
+      "name": "importer_crit_rate",
+      "importance": 0.0694
+    },
+    {
+      "name": "dwell_time",
+      "importance": 0.0693
+    },
+    {
+      "name": "log_dwell",
+      "importance": 0.067
+    },
+    {
+      "name": "exporter_crit_rate",
+      "importance": 0.0563
+    },
+    {
+      "name": "weight_over_flag",
+      "importance": 0.0501
+    },
+    {
+      "name": "weight_large_disc",
+      "importance": 0.0366
+    },
+    {
+      "name": "long_dwell_flag",
+      "importance": 0.0221
+    },
+    {
+      "name": "multi_risk_score",
+      "importance": 0.0216
+    }
+  ],
+  "hist_label_dist": {
+    "Clear": 42347,
+    "Low Risk": 11108,
+    "Critical": 545
+  },
+  "rt_actual_dist": {
+    "Clear": 6646,
+    "Low Risk": 1762,
+    "Critical": 73
+  }
+}

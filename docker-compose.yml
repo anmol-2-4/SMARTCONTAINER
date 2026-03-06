@@ -1,0 +1,54 @@
+version: "3.9"
+
+# SmartContainer Risk Engine — Docker Compose
+# ============================================
+# Usage:
+#   1. Place Historical_Data.csv and Real-Time_Data.csv in this directory
+#   2. docker-compose up --build
+#   3. API available at http://localhost:5000
+#   4. View logs: docker-compose logs -f api
+#   5. Stop: docker-compose down
+
+services:
+
+  # ── Main Risk Engine API ────────────────────────────────────────
+  api:
+    build: .
+    container_name: smartcontainer-api
+    image: smartcontainer-risk-engine:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      # Mount input data
+      - ./Historical_Data.csv:/app/Historical_Data.csv:ro
+      - ./Real-Time_Data.csv:/app/Real-Time_Data.csv:ro
+      # Persist outputs
+      - ./outputs:/app/outputs
+    environment:
+      - HIST_PATH=/app/Historical_Data.csv
+      - SUMMARY_PATH=/app/outputs/summary_report.json
+      - PORT=5000
+      - DEBUG=false
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s   # Allow time for model training (~2 min)
+
+  # ── Optional: Run the batch pipeline and exit ───────────────────
+  batch:
+    build: .
+    container_name: smartcontainer-batch
+    image: smartcontainer-risk-engine:latest
+    volumes:
+      - ./Historical_Data.csv:/app/Historical_Data.csv:ro
+      - ./Real-Time_Data.csv:/app/Real-Time_Data.csv:ro
+      - ./outputs:/app/outputs
+    environment:
+      - HIST_PATH=/app/Historical_Data.csv
+    command: ["python", "risk_engine.py"]
+    profiles:
+      - batch   # Only run with: docker-compose --profile batch up batch
