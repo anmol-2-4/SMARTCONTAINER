@@ -1,13 +1,12 @@
-version: "3.9"
-
 # SmartContainer Risk Engine — Docker Compose
 # ============================================
 # Usage:
 #   1. Place Historical_Data.csv and Real-Time_Data.csv in this directory
-#   2. docker-compose up --build
+#   2. mkdir -p outputs && cp summary_report.json outputs/summary_report.json
+#   3. docker compose up --build -d
 #   3. API available at http://localhost:5000
-#   4. View logs: docker-compose logs -f api
-#   5. Stop: docker-compose down
+#   4. View logs: docker compose logs -f api
+#   5. Stop: docker compose down
 
 services:
 
@@ -51,4 +50,4 @@ services:
       - HIST_PATH=/app/Historical_Data.csv
     command: ["python", "risk_engine.py"]
     profiles:
-      - batch   # Only run with: docker-compose --profile batch up batch
+      - batch   # Only run with: docker compose --profile batch up batch

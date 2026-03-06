@@ -10,8 +10,8 @@
 #     -v $(pwd)/Real-Time_Data.csv:/app/Real-Time_Data.csv \
 #     smartcontainer-risk-engine
 #
-# Or via docker-compose:
-#   docker-compose up
+# Or via Docker Compose:
+#   docker compose up --build -d
 
 FROM python:3.11-slim
 

@@ -23,7 +23,29 @@ Members: `Anmol Gupta`, `Hari Om Mishra`, `Sagar Yadav`
 - Models: `Random Forest` + `Isolation Forest`
 - Deployment: local run, Docker-ready
 
-## Run Locally
+## Run (Final Demo Setup)
+
+### 1) Backend with Docker (Recommended for Judges)
+```bash
+cd /home/anmol/Desktop/s_cont
+mkdir -p outputs
+cp summary_report.json outputs/summary_report.json
+docker compose up --build -d
+curl http://localhost:5000/health
+curl http://localhost:5000/stats
+```
+
+### 2) Frontend Dashboard
+```bash
+cd /home/anmol/Desktop/s_cont/dashboard
+npm install
+npm start
+```
+
+Dashboard: `http://localhost:3000`  
+API: `http://localhost:5000`
+
+## Run Locally (Without Docker)
 
 ### 1) Backend API
 ```bash
@@ -88,6 +110,24 @@ Dashboard starts at: `http://localhost:3000`
 2. Start dashboard (`npm start` in `dashboard/`).
 3. Open `http://localhost:3000`.
 4. Use **Check Container** for single prediction and **Workflow** for audit/drift/feedback.
+
+## Troubleshooting
+- Docker permission denied:
+  ```bash
+  sudo usermod -aG docker $USER
+  newgrp docker
+  ```
+- Port `5000` already in use:
+  ```bash
+  sudo lsof -i :5000
+  sudo kill -9 <PID>
+  ```
+- `/stats` returns `summary_report.json not found`:
+  ```bash
+  mkdir -p outputs
+  cp summary_report.json outputs/summary_report.json
+  docker compose restart api
+  ```
 
 ## Demo Video
 - Walkthrough Video: `https://your-demo-link-here`

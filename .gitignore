@@ -4,6 +4,7 @@ __pycache__/
 
 dashboard/node_modules/
 dashboard/build/
+outputs/
 
 .DS_Store
 *.log
