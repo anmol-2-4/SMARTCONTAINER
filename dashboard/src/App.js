@@ -89,6 +89,20 @@ const DEFAULT_HS_DATA = [
   { ch: "82", name: "Tools/Cutlery", total: 44,  critical: 2, color: "#10b981" },
   { ch: "44", name: "Wood/Timber", total: 52,  critical: 2, color: "#06b6d4" },
 ];
+const HS_CHAPTER_LABELS = {
+  33: "Perfumes/Cosmetics",
+  39: "Plastics",
+  44: "Wood/Timber",
+  62: "Clothing (woven)",
+  63: "Textile Articles",
+  64: "Footwear",
+  65: "Headgear",
+  84: "Machinery",
+  85: "Electronics",
+  87: "Vehicles",
+  90: "Optics/Medical",
+  95: "Toys/Games",
+};
 
 const DEFAULT_FEATURES = [
   { name: "weight_diff_pct",     importance: 36.45, group: "Weight" },
@@ -345,7 +359,13 @@ export default function Dashboard() {
     ? summaryData.origin_risk.map((o) => ({ country: o.Origin_Country, total: o.count, critical: o.high, critPct: o.count ? (o.high / o.count) * 100 : 0, flag: "" }))
     : DEFAULT_ORIGIN_DATA;
   const hsData = (summaryData?.hs_risk || []).length
-    ? summaryData.hs_risk.map((h, idx) => ({ ch: h.hs_ch, name: "HS Chapter", total: h.count, critical: h.high, color: ["#ef4444", "#f97316", "#f59e0b", "#eab308", "#84cc16", "#22c55e"][idx % 6] }))
+    ? summaryData.hs_risk.map((h, idx) => ({
+      ch: h.hs_ch,
+      name: HS_CHAPTER_LABELS[String(h.hs_ch)] || "HS Chapter",
+      total: h.count,
+      critical: h.high,
+      color: ["#ef4444", "#f97316", "#f59e0b", "#eab308", "#84cc16", "#22c55e"][idx % 6],
+    }))
     : DEFAULT_HS_DATA;
   const featuresData = (summaryData?.top_features || []).length
     ? summaryData.top_features.map((f) => ({
