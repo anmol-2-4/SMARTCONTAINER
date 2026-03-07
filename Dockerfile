@@ -37,6 +37,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY api.py .
 COPY risk_engine.py .
+COPY Historical_Data.csv .
+COPY Real-Time_Data.csv .
+COPY summary_report.json .
 
 # Create directory for data and outputs
 RUN mkdir -p /app/data /app/outputs
